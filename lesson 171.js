@@ -134,3 +134,62 @@ console.log(func(5)); //true
 
 // №10
 // Сделайте функцию, которая будет проверять пару чисел на дружественность. Дружественные числа - два числа, для которых сумма всех собственных делителей первого числа равна второму числу и наоборот, сумма всех собственных делителей второго числа равна первому числу.
+
+console.log(isFriendly(220, 284));
+
+function isFriendly(num1, num2){
+  
+  return getDivisorsSum(num1) == num2 && getDivisorsSum(num2) == num1;
+ 
+}
+
+function getDivisorsSum(num){
+  return getSum(getDivisors(num));
+}
+
+function getDivisors(num){
+   let arr = [];
+  for(let i = 1 ; i < num; i++){
+    if(num % i == 0){
+      arr.push(i);
+    }
+  }
+  return arr;
+}
+
+function getSum(arr){
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+    sum += arr[i]; 
+  }
+    return sum;
+  }
+
+  // =======================================
+
+  // №11
+  // Используя созданную вами функцию из предыдущей задачи найдите все пары дружественных чисел в промежутке от 1 до 1000.
+
+  function getDivisors1(num){
+    let arr1 = [];
+   for(let i = 1 ; i < num; i++){
+     if(num % i == 0 && num<=1000){
+       arr1.push(i);
+     }
+   }
+   return arr1;
+ }
+ 
+ function getDivisors2(num){
+    let arr2 = [];
+   for(let i = 1 ; i < num; i++){
+     if(num % i == 0 && num<=1000){
+       arr2.push(i);
+     }
+   }
+   return arr2;
+ }
+ 
+ console.log(getDivisors1(220));
+ console.log(getDivisors2(284));
+  
