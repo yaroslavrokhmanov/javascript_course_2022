@@ -170,26 +170,33 @@ function getSum(arr){
   // №11
   // Используя созданную вами функцию из предыдущей задачи найдите все пары дружественных чисел в промежутке от 1 до 1000.
 
-  function getDivisors1(num){
-    let arr1 = [];
-   for(let i = 1 ; i < num; i++){
-     if(num % i == 0 && num<=1000){
-       arr1.push(i);
-     }
-   }
-   return arr1;
- }
- 
- function getDivisors2(num){
-    let arr2 = [];
-   for(let i = 1 ; i < num; i++){
-     if(num % i == 0 && num<=1000){
-       arr2.push(i);
-     }
-   }
-   return arr2;
- }
- 
- console.log(getDivisors1(220));
- console.log(getDivisors2(284));
+//  Не решено!!!!!!!!!!!!!!!!
   
+// ===========================================
+
+   // №12
+  //  Сделайте функцию, которая будет проверять число на совершенность. Совершенное число - это число, сумма собственных делителей которого равна этому числу.
+
+  function func(num) {
+    let result = 0;
+       for(let i = 0; i <= num / 2; i++){
+             if(num % i === 0) {
+                result += i;
+              }
+         }
+      
+         if(result === num && result !== 0) {
+         return true;
+            }else{
+              return false;
+            }
+          
+     }
+    console.log(func(28)); //true
+    console.log(func(5)); //false
+    console.log(func(496)); //true
+
+    // ==========================================
+
+ // №13
+//  Найдите все счастливые билеты. Счастливый билет - это билет, в котором сумма первых трех цифр его номера равна сумме вторых трех цифр его номера.
