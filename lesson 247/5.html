@@ -1,0 +1,24 @@
+<!-- Дан абзац с числом и кнопка. По нажатию на кнопку прибавьте к значению абзаца единицу и запишите полученное число обратно. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="elem">2</p>  
+    <input id="button" type="submit" value="Push" >
+
+    <script>
+        let elem = document.querySelector('#elem');
+        button.addEventListener('click', function(){
+  
+           let num = elem.textContent;
+          elem.textContent =  Number(num)+ 1;
+        });
+  </script>
+</body>
+</html>
