@@ -1,0 +1,28 @@
+<!-- Дан абзац и кнопка. По клику на кнопку прочитайте HTML код абзаца и выведите его в консоль. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="elem"></p>
+
+    <input id="button" type="submit" value="Push">
+
+    <script>
+        let elem = document.querySelector('#elem');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            console.log(elem.innerHTML = 'New text Javascript');
+        })
+    </script>
+</body>
+
+</html>
