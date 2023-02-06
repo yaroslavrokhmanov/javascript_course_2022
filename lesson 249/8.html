@@ -1,0 +1,43 @@
+<!-- Пусть у вас есть две картинки. Сделайте на странице тег img и две кнопки. По нажатию на первую кнопку запишите в атрибут src путь к первой картинке, а по нажатию на вторую - путь ко второй картинке. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #img1,
+        #img2 {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <img id="img1">
+    <img id="img2">
+
+    <input id="button1" type="submit" value="Button 1">
+    <input id="button2" type="submit" value="Button 2">
+
+    <script>
+        let img1 = document.querySelector('#img1');
+        let img2 = document.querySelector('#img2');
+        let button1 = document.querySelector('#button1');
+        let button2 = document.querySelector('#button2');
+
+
+        button1.addEventListener('click', function () {
+            img1.src = 'https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png';
+            console.log(img.width);
+        })
+
+        button2.addEventListener('click', function () {
+            img2.src = 'https://www.audit-conseil-formation.com/formations/uploads/glossaire_image_30.webp';
+        })
+    </script>
+</body>
+</html>

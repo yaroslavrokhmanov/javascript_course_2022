@@ -1,0 +1,33 @@
+<!-- Пусть у вас есть картинка. Разместите ее на странице с помощью тега img. Пусть даны также кнопка и абзац. Сделайте так, чтобы по клику на кнопку в абзац записался путь к картинки из ее атрибута src. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="img" src="https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png" alt="js"
+        width="110" height="100">
+    <input id="button" type="submit" value="Push">
+    <p id="text"></p>
+
+    <script>
+
+        let img = document.querySelector('#img');
+        let button = document.querySelector('#button');
+        let text = document.querySelector('#text');
+
+        button.addEventListener('click', function () {
+
+            let x = text.innerHTML = img.textContent + img.src;
+        })
+
+    </script>
+</body>
+
+</html>

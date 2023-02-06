@@ -1,0 +1,30 @@
+<!-- Дана картинка в теге img и кнопка. Пусть в атрибуте width задана некоторая ширина. Сделайте кнопку, по нажатию на которую ширина картинки будет увеличиваться в 2 раза. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      
+    <img id="img" src="https://blog.logrocket.com/wp-content/uploads/2020/12/javascript-custom-events.png" alt="js" width="110" height="100">
+    <input id="button" type="submit" value="Push">
+   
+    <script>
+      
+let img = document.querySelector('#img');
+let button = document.querySelector('#button');
+
+
+   button.addEventListener('click', function (){
+     
+     img.width = img.width * 2;
+     console.log(img.width); // 220
+        })
+
+    </script>
+</body>
+</html>

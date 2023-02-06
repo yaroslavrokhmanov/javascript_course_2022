@@ -1,0 +1,31 @@
+<!-- Пусть у вас есть ссылка в виде тега a, кнопка и абзац. По нажатию на кнопку выведите в абзац содержимое атрибута href ссылки. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <a id="elem" href="https://code.mu/ru/javascript/book/prime/dom/basis/attributes-via-properties/">Learning JS</a>
+    <input id="button" type="submit" value="Push">
+    <p id="text"></p>
+
+    <script>
+        let elem = document.querySelector('#elem');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            text.innerHTML = elem.href;
+            console.log(elem.href);
+        })
+    </script>
+
+</body>
+
+</html>
