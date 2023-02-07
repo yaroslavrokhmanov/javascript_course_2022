@@ -1,0 +1,32 @@
+<!-- Даны два инпута и кнопка. В первый инпут пользователем вводится число. По нажатию на кнопку запишите во второй инпут квадрат введенного числа. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem1" type="text">
+    <input id="elem2" type="text">
+    <input id="button" type="submit" value="Button">
+
+    <script>
+        let elem1 = document.querySelector('#elem1');
+        let elem2 = document.querySelector('#elem2');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            let num = elem1.value * elem1.value;
+            elem2.value = num;
+            console.log(elem1.value);  // "5"
+            console.log(elem2.value);  // "25"
+        })
+    </script>
+</body>
+
+</html>

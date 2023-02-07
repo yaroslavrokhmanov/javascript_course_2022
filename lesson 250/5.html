@@ -1,0 +1,52 @@
+<!-- Даны 5 инпутов, абзац и кнопка. В инпут вводятся числа. По нажатию на кнопку запишите среднее арифметическое введенных чисел в абзац. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem1" type="text1">
+    <input id="elem2" type="text2">
+    <input id="elem3" type="text3">
+    <input id="elem4" type="text4">
+    <input id="elem5" type="text5">
+    <p id="text"></p>
+    <input id="button" type="submit" value="Button">
+
+    <script>
+        let elem1 = document.querySelector('#elem1');
+        let elem2 = document.querySelector('#elem2');
+        let elem3 = document.querySelector('#elem3');
+        let elem4 = document.querySelector('#elem4');
+        let elem5 = document.querySelector('#elem5');
+        let text = document.querySelector('#text');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            let num1 = elem1.value;
+            let num2 = elem2.value;
+            let num3 = elem3.value;
+            let num4 = elem4.value;
+            let num5 = elem5.value;
+
+            let res = (Number(num1) + Number(num2) + Number(num3) + Number(num4) + Number(num5));
+            text.innerHTML = res / 5;
+
+            console.log(res); // 150
+            console.log(num1) // 10
+            console.log(num2) // 20
+            console.log(num3) // 30
+            console.log(num4) // 40
+            console.log(num5) // 50
+
+        })
+    </script>
+</body>
+
+</html>
