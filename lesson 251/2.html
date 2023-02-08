@@ -1,0 +1,32 @@
+<!-- Дан инпут. Пусть в него вводится число. По потери фокуса выведите на экран квадрат этого числа. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem" value="">
+    <p id="text"></p>
+    <script>
+        let elem = document.querySelector('#elem');
+        let text = document.querySelector('#text');
+
+        // elem.addEventListener('focus', function() {
+        // 	console.log(1);
+        // });
+
+        elem.addEventListener('blur', function () {
+            text.innerHTML = elem.value * elem.value;
+
+            console.log(elem.value * elem.value);
+        });
+    </script>
+</body>
+
+</html>

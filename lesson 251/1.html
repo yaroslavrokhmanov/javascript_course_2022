@@ -1,0 +1,29 @@
+<!-- Дан инпут. По получению фокуса запишите в него число 1, а по потери фокуса - число 2. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem" value="text">
+
+    <script>
+        let elem = document.querySelector('#elem');
+
+        elem.addEventListener('focus', function () {
+            console.log(1); //1
+        });
+
+        elem.addEventListener('blur', function () {
+            console.log(2); //2
+        });
+    </script>
+</body>
+
+</html>
