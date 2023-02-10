@@ -15,14 +15,14 @@
 <body>
     <div id="elem" class="aaa bbb ccc"></div>
     <input id="button" type="submit" value="Push">
-    
+
     <script>
         let elem = document.querySelector('#elem');
         let button = document.querySelector('#button');
         let result = [];
 
         button.addEventListener('click', function () {
-            let res = elem.className.split();
+            let res = elem.className.split(' ');
             console.log(res); //  ["aaa bbb ccc"]
         });
     </script>
