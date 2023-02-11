@@ -1,0 +1,32 @@
+<!-- Дан следующий код:
+
+<img id="image" src="avatar.png" width="300" height="500">
+console.log(document.querySelector('#image').src);
+console.log(document.querySelector('#image').width);
+console.log(document.querySelector('#image').height);
+Укажите на недостатки данного кода. Исправьте их. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img id="image" src="avatar.png" width="300" height="500">
+
+    <script>
+        let img = document.querySelector('#image');
+        console.log(img.src);
+        console.log(img.width);
+        console.log(img.height);
+        
+        // querySelector использовать часто на странице плохо, потому что каждый раз браузер обрабатывает HTML страницу в поисках id и это замедляет работу браузера. 
+    </script>
+</body>
+
+</html>
