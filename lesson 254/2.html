@@ -1,0 +1,27 @@
+<!-- Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="button" type="submit" value="1">
+
+    <script>
+        let num = 1;
+        let button = document.querySelector('#button');
+        button.addEventListener('click', function () {
+            num = num + 1;
+            button.value = num;
+            console.log(num); // 2,3,4,5,6,7,8,9...
+        });
+    </script>
+</body>
+
+</html>
