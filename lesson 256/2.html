@@ -1,0 +1,33 @@
+<!-- Даны абзацы с текстом и кнопка. По нажатию на кнопку запишите в конец текста каждого абзаца его порядковый номер. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="text">Text </p>
+    <p class="text">Text </p>
+    <p class="text">Text </p>
+
+    <input id="button" type="submit" value="Push">
+
+    <script>
+        let elems = document.querySelectorAll('.text');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+            for (let i = 0; i < elems.length; i + 1) {
+                let elem = elems[i++];
+                elem.innerHTML += i;
+            }
+        }); 
+    </script>
+</body>
+
+</html>
