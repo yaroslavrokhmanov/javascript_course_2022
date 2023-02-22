@@ -1,0 +1,33 @@
+<!-- Даны абзацы с числами. Сделайте так, чтобы по клику на любой абзац его число в нем возводилось в квадрат. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>1</p>
+    <p>2</p>
+    <p>3</p>
+
+    <script>
+        let elems = document.querySelectorAll('p');
+        let result = 0;
+        for (let elem of elems) {
+            elem.addEventListener('click', func);
+        }
+
+        function func() {
+            result = (this.innerHTML * this.innerHTML);
+            this.innerHTML = result;
+            console.log(result);
+        }
+    </script>
+</body>
+
+</html>

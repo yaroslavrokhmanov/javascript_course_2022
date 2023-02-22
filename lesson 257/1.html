@@ -1,0 +1,35 @@
+<!-- Дана следующая функция:
+
+function func() {
+	this.value = Number(this.value) + 1;
+}
+Даны также инпуты. Сделайте так, чтобы по потери фокуса в любом из наших инпутов выполнялась приведенная выше функция. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input value=""></input>
+    <input value=""></input>
+    <input value=""></input>
+
+    <script>
+        let elems = document.querySelectorAll('input');
+        for (let elem of elems) {
+            elem.addEventListener('blur', func);
+        }
+
+        function func() {
+            this.value = Number(this.value) + 1;
+        }
+    </script>
+</body>
+
+</html>
