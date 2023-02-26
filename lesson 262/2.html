@@ -1,0 +1,26 @@
+<!-- Дан элемент:
+
+<input id="elem" class="www zzz">
+Получите значение его атрибута class. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="elem" class="www zzz">
+
+    <script>
+        let elem = document.querySelector('#elem');
+        let clas = elem.getAttribute('class');
+        console.log(clas); // "www zzz"
+    </script>
+</body>
+
+</html>
