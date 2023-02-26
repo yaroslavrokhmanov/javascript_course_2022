@@ -1,0 +1,29 @@
+<!-- Дан список ul, в каждом пункте которого записано число. Сделайте так, чтобы по клику на любую li ее число увеличивалось на единицу.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>1</ul>
+    <ul>2</ul>
+    <ul>3</ul>
+
+    <script>
+        let elems = document.querySelectorAll('ul');
+
+        for (let elem of elems) {
+            elem.addEventListener('click', function func() {
+                this.innerHTML++;
+            });
+        }
+    </script>
+</body>
+
+</html>

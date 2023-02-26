@@ -1,0 +1,33 @@
+<!-- Модифицируйте предыдущую задачу так, чтобы каждая li увеличивала свое значение только если ее значение меньше 10. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>1</ul>
+    <ul>2</ul>
+    <ul>3</ul>
+
+    <script>
+        let elems = document.querySelectorAll('ul');
+
+        for (let elem of elems) {
+            elem.addEventListener('click', function func() {
+                this.innerHTML++;
+                if (this.innerHTML >= 10) {
+                    this.removeEventListener('click', func);
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>

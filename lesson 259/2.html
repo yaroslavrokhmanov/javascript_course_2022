@@ -1,0 +1,30 @@
+<!-- Дана кнопка, значением которой служит число 1. Сделайте так, чтобы по клику на эту кнопку ее значение каждый раз увеличивалось на единицу. После того, как значение кнопки достигнет 10 - отвяжите обработчик события, чтобы кнопка больше не реагировала на нажатие. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="button" type="submit" value="1">
+
+    <script>
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', func);
+
+        function func() {
+            button.value++;
+            if (button.value >= 10) {
+                this.removeEventListener('click', func);
+            }
+        }
+    </script>
+</body>
+
+</html>
