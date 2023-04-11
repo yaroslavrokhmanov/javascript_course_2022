@@ -1,0 +1,29 @@
+<!-- Дан список ul и кнопка. По клику на кнопку добавьте тегам li свойство float в значении left. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="elem">
+        <li>Jedynka</li>
+        <li>Dwója</li>
+        <li>Zero</li>
+      </ul>
+      <input id="button" type="submit" value="Push">
+        
+          <script>
+      let elem = document.querySelector('#elem');
+      let button = document.querySelector('#button');
+            
+      button.addEventListener('click', function () {  
+      elem.style.cssFloat = 'right'
+      });  
+        
+          </script>
+</body>
+</html>

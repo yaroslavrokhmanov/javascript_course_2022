@@ -1,0 +1,35 @@
+<!-- Стилизация элементов через атрибут style в JavaScript -->
+
+<!-- Дан див и кнопка. По клику на кнопку добавьте диву ширину, высоту и границу. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="elem">Text Javascript</div>
+    <input id="button" type="submit" value="Push">
+    <script>
+        let elem = document.querySelector('#elem');
+        let button = document.querySelector('#button');
+
+        button.addEventListener('click', function () {
+
+            elem.style.width = '300px';
+            elem.style.height = '200px';
+            elem.style.paddingTop = '100px';
+            elem.style.paddingRight = '100px';
+            elem.style.paddingLeft = '100px';
+            elem.style.background = 'red';
+        });
+
+    </script>
+</body>
+
+</html>
