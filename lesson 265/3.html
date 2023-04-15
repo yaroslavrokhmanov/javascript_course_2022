@@ -1,0 +1,54 @@
+<!-- Модифицируйте предыдущую задачу так, чтобы повторное нажатие на кнопку отменяло действие этой кнопки. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .text {
+            text-decoration: line-through;
+        }
+
+        .font {
+            font-weight: bold;
+        }
+
+        .color {
+            color: red;
+        }
+    </style>
+
+    <p>Hello, how are you?</p>
+    <input class="button1" type="submit" value="перечеркнуть">
+    <input class="button2" type="submit" value="сделать жирным">
+    <input class="button3" type="submit" value="сделать красным">
+
+    <script>
+        let elem = document.querySelector('p');
+        console.log(elem);
+        let elem1 = document.querySelector('.button1');
+        let elem2 = document.querySelector('.button2');
+        let elem3 = document.querySelector('.button3');
+
+        elem1.addEventListener('click', function func() {
+            elem.classList.toggle('text');
+        });
+
+        elem2.addEventListener('click', function func() {
+            elem.classList.toggle('font');
+        });
+
+        elem3.addEventListener('click', function func() {
+            elem.classList.toggle('color');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!-- Стилизация с помощью CSS классов на JavaScript -->
+
+<!-- Объясните, почему я выбрал для названия класса слово colored, а не слово green, явно указывающее на желаемый нами цвет. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .colored {
+        color: green;
+    }
+        </style>
+</head>
+<body>
+
+    <p>text1</p>
+    <p>text2</p>
+    <p>text3</p>
+
+    <script>
+        let elems = document.querySelectorAll('p');
+
+for (let elem of elems) {
+	elem.addEventListener('click', function() {
+		this.classList.add('colored'); // добавляем абзацу класс
+	});
+}
+    </script>
+    <!-- colored - название класса для того что бы изменить цвет нужно просто добавить данный класс. Это понятно не только программисту а и человеку знающему css. -->
+</body>
+</html>
