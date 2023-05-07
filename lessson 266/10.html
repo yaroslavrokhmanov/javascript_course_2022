@@ -1,0 +1,47 @@
+<!-- Дан элемент #elem:
+<ul>
+	<li>text1</li>
+	<li>text2</li>
+	<li id="elem">text3</li>
+	<li>text4</li>
+	<li>text5</li>
+</ul>
+Поменяйте местами текст его соседа сверху и текст его соседа снизу. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>text1</li>
+        <li>text2</li>
+        <li id="elem">text3</li>
+        <li>text4</li>
+        <li>text5</li>
+    </ul>
+
+    <script>
+        let elem = document.getElementById('elem');
+
+        let elem1 = elem.previousElementSibling;
+        let elem2 = elem.nextElementSibling;
+
+        let firstElem = elem1.innerHTML;
+        let nextElem = elem2.innerHTML;
+
+        elem1.innerHTML = nextElem;
+        elem2.innerHTML = firstElem;
+
+        console.log(elem1);
+        console.log(elem2);
+    </script>
+</body>
+
+</html>

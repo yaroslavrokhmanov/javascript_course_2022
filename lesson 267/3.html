@@ -1,0 +1,32 @@
+<!-- Даны элементы:
+
+<p class="www">elem 1</p>
+<p class="www">elem 2</p>
+<p class="www">elem 3</p>
+Получите эти элементы по имени класса и сделайте их текст красного цвета. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p class="www">elem 1</p>
+    <p class="www">elem 2</p>
+    <p class="www">elem 3</p>
+
+    <script>
+        let elems = document.getElementsByClassName('www');
+        for(elem of elems){
+            elem.innerHTML  = elem.style.color = "red";
+        }
+        console.log(elem);
+    </script>
+</body>
+
+</html>
